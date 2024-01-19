@@ -1,2 +1,5 @@
 https://hooks.slack.com/services/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
 https://hooks.slack.com/services/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
+
+pushgateway commmand >
+echo "demo_metric 123" | curl --data-binary @- http://localhost:9091/metrics/job/demo_pg_job/instance/demo_instance/event/add
