@@ -1,5 +1,17 @@
+pushing code to github >
+git add .
+git commit -m "message"
+git push -u origin main
+
 https://hooks.slack.com/services/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
 https://hooks.slack.com/services/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
 
 pushgateway commmand >
 echo "demo_metric 123" | curl --data-binary @- http://localhost:9091/metrics/job/demo_pg_job/instance/demo_instance/event/add
+
+file_sd.yml >
+- targets:
+  - localhost:9100
+  labels:
+    team: "development"
+    region: "Mumbai"
