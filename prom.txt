@@ -15,3 +15,15 @@ file_sd.yml >
   labels:
     team: "development"
     region: "Mumbai"
+
+
+file_sd.yml
+[
+    {
+        "targets": [ "localhost:9100" ],
+        "labels": {
+            "team": "develpoment",
+            "region": "Mumbai"
+        }
+    }
+]
