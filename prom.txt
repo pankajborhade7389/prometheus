@@ -27,3 +27,10 @@ file_sd.yml
         }
     }
 ]
+
+ec2_sd_configs >
+  - job_name: 'ec2'
+    ec2_sd_configs:
+      - access_key: AIADFGHK6QLLVDF1B6U
+        secret_key: H5cIdfGzbxG3ql64h65u5nd6rfy5ZbiXZ/JjgA82
+        region: ap-south-1
