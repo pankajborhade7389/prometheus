@@ -34,3 +34,44 @@ ec2_sd_configs >
       - access_key: AIADFGHK6QLLVDF1B6U
         secret_key: H5cIdfGzbxG3ql64h65u5nd6rfy5ZbiXZ/JjgA82
         region: ap-south-1
+
+// drop and keep
+  - job_name: 'node_exporter'
+    file_sd_configs:
+    - files:
+      - file_sd.yml
+    relabel_configs:
+      - source_labels: [team]
+        regex: l.*
+        action: drop
+
+file_sd
+- targets:
+  - localhost:9100
+  labels:
+    team: "development"
+    region: "Mumbai"
+
+- targets:
+  - localhost1:9100
+  labels:
+    team: "monitoring"
+    region: "Bangalore"
+
+- targets:
+  - localhost2:9100
+  labels:
+    team: "development"
+    region: "Bangalore"
+
+- targets:
+  - localhost3:9100
+  labels:
+    team: "l1"
+    region: "Hyderabad"
+
+- targets:
+  - localhost4:9100
+  labels:
+    team: "l2"
+    region: "Bangalore"
